@@ -1,0 +1,14 @@
+@mixin margin-auto {
+	margin: 0 auto;
+}
+
+@mixin odd(){
+  &:nth-child(odd) {
+    @content
+  }
+}
+
+@mixin wrapper($max-width) {
+	max-width: $max-width;
+	margin: auto;
+}

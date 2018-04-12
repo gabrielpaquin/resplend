@@ -1,0 +1,26 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+  Keyframes
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+@keyframes come-in {
+  to { 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes growup {
+  50% { 
+    transform: scale(1.05);
+  }
+  100% { 
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  20% { 
+    opacity: 0; 
+  }
+  100% {
+  	opacity: 1;
+  }
+}
