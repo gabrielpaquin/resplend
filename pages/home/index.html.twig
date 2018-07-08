@@ -1,89 +1,108 @@
 {% include "pieces/header.html.twig" %}
-<main id="main" class="home">
-	<div class="slideshow">
-		<ul class="slides">
-			<li class="slide">
-				<div class="wrapper">
-					<div class="slide-details">
-						<h2 class="slide-title">Feel good <br>Be beautiful</h2>
-						<a href="">Click to view more</a>
-						<span class="slide-counter"><span class="current">1</span>/3<span class="total"></span></span>
+<main id="home" class="home">
+	<div id="slideshows_wrapper">
+		<div class="slideshow img" data-animation="slide">
+			<ul class="slides">
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<img src="{{niveau}}images/slide1.jpg" alt="Jeune fille qui sourie">
+						</div>
 					</div>
-					<div class="slide-img">
-						<img src="{{niveau}}images/slide1.jpg" alt="Jeune fille qui sourie">
+
+				</li>
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<img src="{{niveau}}images/slide2.jpg" alt="Jeune fille qui sourie">
+						</div>
 					</div>
-				</div>
-				
-			</li>
-			<li class="slide">
-				<div class="wrapper">
-					<div class="slide-details">
-						<h2 class="slide-title">Smile to the life</h2>
-						<a href="">Click to view more</a>
-						<span class="slide-counter"><span class="current">2</span>/3<span class="total"></span></span>
+
+				</li>
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<img src="{{niveau}}images/slide3.jpg" alt="Pierre précieuse">
+						</div>
 					</div>
-					<div class="slide-img">
-						<img src="{{niveau}}images/slide2.jpg" alt="Jeune fille qui sourie">
+				</li>
+			</ul>
+		</div>
+		<div class="slideshow title" data-animation="fade">
+			<ul class="slides">
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<h2 class="slide-title">Feel good <br>Be beautiful</h2>
+							<a href="">Click to view more</a>
+							<span class="slide-counter"><span class="current">1</span>/3<span class="total"></span></span>
+						</div>
 					</div>
-				</div>
-				
-			</li>
-			<li class="slide">
-				<div class="wrapper">
-					<div class="slide-details">
-						<h2 class="slide-title">Always feel young and free</h2>
-						<a href="">Click to view more</a>
-						<span class="slide-counter"><span class="current">3</span>/3<span class="total"></span></span>
+				</li>
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<h2 class="slide-title">Shine through <br>your smile</h2>
+							<a href="">Click to view more</a>
+							<span class="slide-counter"><span class="current">2</span>/3<span class="total"></span></span>
+						</div>
 					</div>
-					<div class="slide-img">
-						<img src="{{niveau}}images/slide3.jpg" alt="Pierre précieuse">
+
+				</li>
+				<li class="slide">
+					<div class="wrapper">
+						<div class="content">
+							<h2 class="slide-title">Ever so <br>Be beautiful</h2>
+							<a href="">Click to view more</a>
+							<span class="slide-counter"><span class="current">3</span>/3<span class="total"></span></span>
+						</div>
 					</div>
-				</div>
-			</li>
-		</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="video">
+	<!--<div class="video">
 		<iframe src="https://player.vimeo.com/video/110831599" 
 				frameborder="0" 
 				webkitallowfullscreen 
 				mozallowfullscreen 
 				allowfullscreen>
 		</iframe>
-	</div>
+	</div>-->
 	<div class="overview">
 		<div class="chapo">
 			<h2>Overview</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-				Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.
+				Using the latest breakthrough in dental esthetics, Resplend aims to deliver no preparation prosthetics. No preparation means no tooth reduction. That’s right. We respect where you come from and want to help you through with our solution, but if ever you want to go back you can. It’s still guarantedd to last. Resplend intends to bring you through a true long lasting process.
+				Made to fit each indivudual smile, following a rigorous process, each tooth perfectly adapts to your mouth in order to help you get the smile you always should’ve had.
 			</p>
 		</div>
 		<div class="blocs">
 			<div class="bloc position-left">
 				<div class="wrapper">
-					<p class="exergue paroller">
+					<p class="exergue paroller" data-parollerdirection="-1" data-parolleraxis="y" data-parollerspeed="0.2">
 						glance
 					</p>
 					<div class="text">
 						<h3>Getting your smile back</h3>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+						<p>We believe that wether it’s been through an accident, or if you feel that your smile could look better, you deserve a chance to feel better with yourself. Don’t be shy, smile outloud!</p>
 					</div>
 					<div class="bloc-img">
-						<img src="{{niveau}}images/slide2.jpg" alt="Une jeune fille rousse qui sourie.">
+						<img src="{{niveau}}images/bloc1.jpg" alt="Une jeune fille rousse qui sourie.">
 					</div>		
 				</div>		
 			</div>
 			<div class="bloc position-right">
 				<div class="wrapper">
-					<p class="exergue paroller">
+					<p class="exergue paroller" data-parollerdirection="1" data-parolleraxis="y" data-parollerspeed="0.2">
 						Quick
 					</p>
 					<div class="bloc-img">
-						<img src="{{niveau}}images/skull.jpg" alt="Une tête de squellette faite de diamant.">
+						<img src="{{niveau}}images/bloc2.jpg" alt="Une tête de squellette faite de diamant.">
 					</div>
 					<div class="text">
 						<h3>A non invasive technique</h3>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+						<p>our conviction is that even though you feel you could improve something about yourself you should be left free to go back. Our technique doesn’t imply any tooth preparation. Ever heard of going back from surgery? We guessed not.</p>
 					</div>	
 				</div>			
 			</div>
@@ -91,18 +110,19 @@
 				<div class="wrapper">
 					<div class="text">
 						<h3>Custom made and unique</h3>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+						<p>your face is unique, so is your smile. A true revelator of your own unique beauty, a smile can only be custom made. No shortcut here. This is why everything starts with, and our technique will take you where you want. Not the other way around.</p>
 					</div>
 					<div class="bloc-img">
-						<img src="{{niveau}}images/slide3.jpg" alt="Des diamants précieux mauves.">
+						<img src="{{niveau}}images/bloc3.jpg" alt="Des diamants précieux mauves.">
 					</div>
 				</div>				
 			</div>				
 		</div>
 		<div class="instagram_feed">
 			<div class="wrapper">
-				<p class="exergue left">Recent</p>
-				<p class="exergue right">Instagram</p>
+				<p class="exergue paroller" data-parollerdirection="1"  data-parolleraxis="x" data-parollerspeed="0.2">Recent</p>
+				<p class="exergue paroller" data-parollerdirection="-1" data-parolleraxis="x" data-parollerspeed="0.2">Instagram</p>
+				<h3 class="mobile_title">Recent instagram</h3>
 				<ul>
 					{% for pic in instagram_array %}
 					<li class="slide-in--element">

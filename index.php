@@ -15,36 +15,32 @@ $title="Resplend";
 
 //Inclusions nécessaires
 require_once($strNiveau . 'inc/lib/Twig/Autoloader.php');
+require_once($strNiveau . 'inc/lib/Savant3.class.php');
 require_once($strNiveau . 'inc/scripts/instagram_feed.php');
+require_once($strNiveau . 'inc/scripts/config.inc.php');
+
+// Instancier, configurer et afficher le template
+
+$arrConfigTpl = array(
+    'template_path' => array($strNiveau.'pages', $strNiveau.'pages/pieces')
+);
+
+$objTpl = new Savant3($arrConfigTpl);
+
+$objTpl->niveau = $strNiveau;
+//Assigner des données comme attributs du template
+$objTpl->title = $title;
+$objTpl->page = $page;
+$objTpl->lang = $lang;
+$objTpl->instagram_array = $instagram_array;
+
+// Définir les composantes de la page avec la méthode fetch
+
+$objTpl->page=$page;
+$objTpl->header=$objTpl->fetch('header.tpl.php');
+$objTpl->footer=$objTpl->fetch('footer.tpl.php');
 
 
-//Configuration de Twig
-Twig_Autoloader::register();
-$loader = new Twig_Loader_Filesystem($strNiveau . 'pages');
-
-$twig = new Twig_Environment($loader, array(
-    'cache'=> false,
-    'debug'=>true
-));
-
-
-require_once($strNiveau . 'inc/pieces/header.php');
-
-
-
-//Instanciation du template
-$template = $twig->loadTemplate('home/index.html.twig');
-    $child = $twig->loadTemplate('pieces/header.html.twig');
-    $childRender=$child->render(array('niveau'=>$strNiveau));
-
-//Affichage du template principal
-echo $template->render(array(
-    //Insérez vos variable à envoyer ici
-    'niveau'=>$strNiveau,
-    'title'=>$title,
-    'page'=>$page,
-    'instagram_array'=>$instagram_array,
-    'header'=>$childRender,
-
-));
+// Afficher le template principal
+$objTpl->display('home/index.tpl.php');
 

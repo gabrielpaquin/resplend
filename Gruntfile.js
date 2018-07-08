@@ -1,35 +1,22 @@
 module.exports = function(grunt) {
-	//1. Configuration de l'ensemble des tâches
+	// 1. Configuration de l'ensemble des tâches
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		//2. Configuration des tâches
+		// 2. Configuration des tâches
+
 		concat: {
 			dist:{
 				src: [
-				'src/js/vendor/*.js',
-				'src/js/app.js'
+					'src/js/vendor/*.js',
+					'src/js/app.js'
 				],
 				dest: 'src/js/app.concat.js'
 			}
 		},
 		uglify: {
 			build: {
-				src: 'src/js/app.concat.js', 
+				src: 'src/js/app.concat.js',
 				dest: 'js/app.min.js'
-			} 
-		},
-		sass: {
-			app: {
-				files: [{
-					expand: true,
-					cwd: 'scss',
-					src: ['src/scss/*.scss'],
-					dest: 'css',
-					ext: '.css'
-				}]
-			},
-			options: {
-				sourceMap: true
 			}
 		},
 		watch: {
@@ -37,15 +24,14 @@ module.exports = function(grunt) {
 				files: ['src/js/app.js'],
 				tasks: ['concat','uglify']
 			}
-		} 
+		}
 	});
 
 	//3. Déclaration des extensions
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-watch');	
-  	grunt.loadNpmTasks('grunt-sass');
-	//grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-sass');
 
 	//4. Déclaration des tâches à exécuter
 	grunt.registerTask('default',['concat','uglify','watch']);

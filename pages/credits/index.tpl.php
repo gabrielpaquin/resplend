@@ -1,0 +1,26 @@
+<?php echo $this->header; ?>
+<main id="credits" class="credits">
+	<section>
+		<article>
+			<h2><?php echo _("This is a text string!") ?></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor semper orci in fermentum. Mauris at quam vitae est efficitur pharetra. Nulla vel justo eget erat convallis laoreet rhoncus non nunc. Suspendisse auctor enim augue, sit amet efficitur metus faucibus quis. Ut porttitor metus vel ex viverra egestas sit amet a lacus. Cras metus lorem, imperdiet ac augue vitae, ornare varius eros. Suspendisse varius congue diam, a tristique elit sodales nec. Aliquam malesuada lorem eu libero pulvinar tincidunt. Quisque non justo ornare, gravida elit sit amet, maximus nulla.</p>
+			<p>Donec ac faucibus lacus, eu euismod tortor. Aenean malesuada lorem et orci finibus, non euismod odio congue. Maecenas non dui ut lectus commodo mattis eget id neque. Vestibulum eget dui magna. Integer scelerisque justo sit amet sapien ultrices, at euismod elit mollis. Aenean consectetur quam vitae eros efficitur aliquam. Praesent in pharetra dui. Pellentesque consequat risus a imperdiet facilisis. Ut id lectus pharetra, ornare elit eu, finibus tortor. Maecenas et auctor justo. Etiam quis magna ac justo porttitor commodo a id est. Aenean a est non erat venenatis varius. Aenean interdum tincidunt lacinia.</p>
+		</article>
+		<article>
+			<h2><?php echo _("Crédit 2") ?></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor semper orci in fermentum. Mauris at quam vitae est efficitur pharetra. Nulla vel justo eget erat convallis laoreet rhoncus non nunc. Suspendisse auctor enim augue, sit amet efficitur metus faucibus quis. Ut porttitor metus vel ex viverra egestas sit amet a lacus. Cras metus lorem, imperdiet ac augue vitae, ornare varius eros. Suspendisse varius congue diam, a tristique elit sodales nec. Aliquam malesuada lorem eu libero pulvinar tincidunt. Quisque non justo ornare, gravida elit sit amet, maximus nulla.</p>
+			<p>Donec ac faucibus lacus, eu euismod tortor. Aenean malesuada lorem et orci finibus, non euismod odio congue. Maecenas non dui ut lectus commodo mattis eget id neque. Vestibulum eget dui magna. Integer scelerisque justo sit amet sapien ultrices, at euismod elit mollis. Aenean consectetur quam vitae eros efficitur aliquam. Praesent in pharetra dui. Pellentesque consequat risus a imperdiet facilisis. Ut id lectus pharetra, ornare elit eu, finibus tortor. Maecenas et auctor justo. Etiam quis magna ac justo porttitor commodo a id est. Aenean a est non erat venenatis varius. Aenean interdum tincidunt lacinia.</p>
+		</article>
+		<article>
+			<h2><?php echo _("Crédit 3") ?></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor semper orci in fermentum. Mauris at quam vitae est efficitur pharetra. Nulla vel justo eget erat convallis laoreet rhoncus non nunc. Suspendisse auctor enim augue, sit amet efficitur metus faucibus quis. Ut porttitor metus vel ex viverra egestas sit amet a lacus. Cras metus lorem, imperdiet ac augue vitae, ornare varius eros. Suspendisse varius congue diam, a tristique elit sodales nec. Aliquam malesuada lorem eu libero pulvinar tincidunt. Quisque non justo ornare, gravida elit sit amet, maximus nulla.</p>
+			<p>Donec ac faucibus lacus, eu euismod tortor. Aenean malesuada lorem et orci finibus, non euismod odio congue. Maecenas non dui ut lectus commodo mattis eget id neque. Vestibulum eget dui magna. Integer scelerisque justo sit amet sapien ultrices, at euismod elit mollis. Aenean consectetur quam vitae eros efficitur aliquam. Praesent in pharetra dui. Pellentesque consequat risus a imperdiet facilisis. Ut id lectus pharetra, ornare elit eu, finibus tortor. Maecenas et auctor justo. Etiam quis magna ac justo porttitor commodo a id est. Aenean a est non erat venenatis varius. Aenean interdum tincidunt lacinia.</p>
+		</article>
+		<article>
+			<h2><?php echo _("Crédit 4") ?></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor semper orci in fermentum. Mauris at quam vitae est efficitur pharetra. Nulla vel justo eget erat convallis laoreet rhoncus non nunc. Suspendisse auctor enim augue, sit amet efficitur metus faucibus quis. Ut porttitor metus vel ex viverra egestas sit amet a lacus. Cras metus lorem, imperdiet ac augue vitae, ornare varius eros. Suspendisse varius congue diam, a tristique elit sodales nec. Aliquam malesuada lorem eu libero pulvinar tincidunt. Quisque non justo ornare, gravida elit sit amet, maximus nulla.</p>
+			<p>Donec ac faucibus lacus, eu euismod tortor. Aenean malesuada lorem et orci finibus, non euismod odio congue. Maecenas non dui ut lectus commodo mattis eget id neque. Vestibulum eget dui magna. Integer scelerisque justo sit amet sapien ultrices, at euismod elit mollis. Aenean consectetur quam vitae eros efficitur aliquam. Praesent in pharetra dui. Pellentesque consequat risus a imperdiet facilisis. Ut id lectus pharetra, ornare elit eu, finibus tortor. Maecenas et auctor justo. Etiam quis magna ac justo porttitor commodo a id est. Aenean a est non erat venenatis varius. Aenean interdum tincidunt lacinia.</p>
+		</article>
+	</section>
+</main>
+<?php echo $this->footer; ?>

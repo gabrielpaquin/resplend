@@ -4,7 +4,7 @@
  * Développeur: Gabriel Paquin
  * Date: 13-03-18
  */
-$access_token="3166078233.1677ed0.7a5e162ce0104535bc52ce360521c6af";
+$access_token="7293693374.1677ed0.9c703cd895224e0ea7c963f14a139423";
 $photo_count=9;
      
 $json_link="https://api.instagram.com/v1/users/self/media/recent/?";

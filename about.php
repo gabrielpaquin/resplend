@@ -15,35 +15,32 @@ $title="Resplend";
 
 //Inclusions nécessaires
 require_once($strNiveau . 'inc/lib/Twig/Autoloader.php');
-//require_once($strNiveau . 'inc/scripts/config.inc.php');
+require_once($strNiveau . 'inc/lib/Savant3.class.php');
+require_once($strNiveau . 'inc/scripts/config.inc.php');
 
 
-//Configuration de Twig
-Twig_Autoloader::register();
-$loader = new Twig_Loader_Filesystem($strNiveau . 'pages');
+// Instancier, configurer et afficher le template
 
-$twig = new Twig_Environment($loader, array(
-    'cache'=> false,
-    'debug'=>true
-));
+$arrConfigTpl = array(
+    'template_path' => array($strNiveau.'pages', $strNiveau.'pages/pieces')
+);
+$objTpl = new Savant3($arrConfigTpl);
 
 
-require_once($strNiveau . 'inc/pieces/header.php');
+$objTpl->niveau = $strNiveau;
+//Assigner des données comme attributs du template
+$objTpl->title = $title;
+$objTpl->page = $page;
+$objTpl->lang = $lang;
+//$objTpl->varLang = $langAffichage;
+
+// Définir les composantes de la page avec la méthode fetch
+
+$objTpl->page=$page;
+$objTpl->header=$objTpl->fetch('header.tpl.php');
+$objTpl->footer=$objTpl->fetch('footer.tpl.php');
 
 
-
-//Instanciation du template
-$template = $twig->loadTemplate('about/index.html.twig');
-    $child = $twig->loadTemplate('pieces/header.html.twig');
-    $childRender=$child->render(array('niveau'=>$strNiveau));
-
-//Affichage du template principal
-echo $template->render(array(
-    //Insérez vos variable à envoyer ici
-    'niveau'=>$strNiveau,
-    'title'=>$title,
-    'page'=>$page,
-    'header'=>$childRender,
-
-));
+// Afficher le template principal
+$objTpl->display('about/index.tpl.php');
 
