@@ -942,6 +942,8 @@ header nav {
     width: 39%; }
     @media screen and (max-width: 768px) {
       .html .intro h2 {
+        font-size: 80px;
+        font-size: 5rem;
         width: 100%;
         padding-bottom: 20px; } }
   .html .intro p {
