@@ -5,7 +5,7 @@
 		</p>
 		<ul class="social_medias">
 			<li>
-				<a href="">Instragram</a>
+				<a href="">Instagram</a>
 			</li>
 			<li>
 				<a href="">Facebook</a>		

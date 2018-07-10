@@ -730,7 +730,9 @@ header nav {
     line-height: 0.5; }
     @media screen and (max-width: 1200px) {
       .home .overview .chapo h2 {
-        line-height: 1; } }
+        line-height: 1;
+        font-size: 80px;
+        font-size: 5rem; } }
   .home .overview .chapo p {
     font-size: 23px;
     font-size: 1.4375rem;
@@ -763,7 +765,8 @@ header nav {
       position: relative; }
       @media screen and (max-width: 768px) {
         .home .overview .blocs .bloc .wrapper {
-          width: 100%; } }
+          width: 100%;
+          flex-direction: column; } }
       .home .overview .blocs .bloc .wrapper .exergue {
         font-size: 120px;
         position: absolute;
@@ -774,6 +777,11 @@ header nav {
       .home .overview .blocs .bloc .wrapper .text {
         box-sizing: border-box;
         width: 66%; }
+        @media screen and (max-width: 768px) {
+          .home .overview .blocs .bloc .wrapper .text {
+            width: 100%;
+            padding-left: 0 !important;
+            padding-right: 0 !important; } }
         .home .overview .blocs .bloc .wrapper .text h3 {
           font-size: 30px;
           font-size: 1.875rem;
@@ -784,6 +792,10 @@ header nav {
       .home .overview .blocs .bloc .wrapper .bloc-img {
         position: relative;
         width: 33%; }
+        @media screen and (max-width: 768px) {
+          .home .overview .blocs .bloc .wrapper .bloc-img {
+            width: 100%;
+            order: 2; } }
         .home .overview .blocs .bloc .wrapper .bloc-img img {
           position: absolute;
           width: 100%;
@@ -791,6 +803,9 @@ header nav {
           object-fit: cover;
           top: 0;
           left: 0; }
+          @media screen and (max-width: 768px) {
+            .home .overview .blocs .bloc .wrapper .bloc-img img {
+              position: relative; } }
   .home .overview .blocs .bloc.position-left .wrapper .exergue {
     right: -40%;
     bottom: -0; }
@@ -866,8 +881,8 @@ header nav {
         margin-bottom: 5%; }
         @media screen and (max-width: 768px) {
           .home .instagram_feed .wrapper ul li {
-            width: 100%;
-            float: none; } }
+            margin-bottom: 2.5%;
+            width: 31.6%; } }
         .home .instagram_feed .wrapper ul li:before {
           content: "";
           display: block;
@@ -876,7 +891,7 @@ header nav {
           margin-right: 5%; }
           @media screen and (max-width: 768px) {
             .home .instagram_feed .wrapper ul li:nth-child(3n-2) {
-              margin-right: 0; } }
+              margin-right: 2.5%; } }
         .home .instagram_feed .wrapper ul li:nth-child(3n-1) {
           animation-duration: 1s; }
         .home .instagram_feed .wrapper ul li:nth-child(3n) {
@@ -884,7 +899,7 @@ header nav {
           animation-duration: 1.25s; }
           @media screen and (max-width: 768px) {
             .home .instagram_feed .wrapper ul li:nth-child(3n) {
-              margin-left: 0; } }
+              margin-left: 2.5%; } }
         .home .instagram_feed .wrapper ul li .img-wrapper {
           position: absolute;
           top: 0;

@@ -569,6 +569,7 @@ header {
 
 				@media screen and (max-width: $tablette) {
 					line-height: 1;
+					@include font-size(80px);
 				}
 			}
 
@@ -615,6 +616,7 @@ header {
 
 					@media screen and (max-width: $phone) {
 						width: 100%;
+						flex-direction: column;
 					}
 
 					.exergue {
@@ -631,6 +633,12 @@ header {
 						box-sizing: border-box;
 						width: 66%;
 
+						@media screen and (max-width: $phone) {
+							width: 100%;
+							padding-left: 0 !important;
+							padding-right: 0 !important;
+						}
+
 						h3 {
 							@include font-size(30px);
 							text-transform: uppercase;
@@ -644,7 +652,11 @@ header {
 					.bloc-img {
 						position: relative;
 						width: 33%;
-						//height: 100%;
+
+						@media screen and (max-width: $phone) {
+							width: 100%;
+							order: 2;
+						}
 
 						img {
 					      	position: absolute;
@@ -653,6 +665,10 @@ header {
 						    object-fit: cover;
 						    top: 0;
 						    left: 0;
+
+							@media screen and (max-width: $phone) {
+								position: relative;
+							}
 						}
 					}
 				}
@@ -766,8 +782,8 @@ header {
 					margin-bottom: 5%;
 
 					@media screen and (max-width: $phone) {
-						width: 100%;
-						float: none;
+						margin-bottom: 2.5%;
+						width: 31.6%;
 					}
 
 					&:before {
@@ -780,7 +796,7 @@ header {
 						margin-right: 5%;
 
 						@media screen and (max-width: $phone) {
-							margin-right: 0;
+							margin-right: 2.5%;
 						}
 					}
 
@@ -793,7 +809,7 @@ header {
 						animation-duration: 1.25s;
 
 						@media screen and (max-width: $phone) {
-							margin-left: 0;
+							margin-left: 2.5%;
 						}
 					}
 
