@@ -20,6 +20,10 @@
             <p><?php echo _('Find your pratician by calling this number'); ?></p>
             <p>+33 1 88 32 10 75</p>
         </div>
+        <div class="overlay_element pratician_contact">
+            <p>resplend@smile.com</p>
+            <p>+33 1 88 32 10 75</p>
+        </div>
         <div class="overlay_bg"></div>
     </div>
     <header>
@@ -53,7 +57,7 @@
                 <div class="wrapper">
                     <li class="nav-el"><a href="<?php echo $this->niveau ?>/about.php?lang=<?php echo $this->lang; ?>"><?php echo _('About'); ?></a></li>
                     <li class="nav-el"><a href="<?php echo $this->niveau ?>/technique.php?lang=<?php echo $this->lang; ?>"><?php echo _('Technique'); ?></a></li>
-                    <li class="nav-el"><a href="<?php echo $this->niveau ?>/contact.php?lang=<?php echo $this->lang; ?>"><?php echo _('Contact'); ?></a></li>
+                    <li class="nav-el"><a href=""  data-trigger="pratician_contact"><?php echo _('Contact'); ?></a></li>
                     <li class="nav-el mobile"><a href="#" data-trigger="pratician_info"><?php echo _('Find your pratician'); ?></a></li>
                     <li class="nav-el mobile">
                         <ul>

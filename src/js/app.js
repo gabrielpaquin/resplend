@@ -70,8 +70,9 @@ function init() {
  */
 function init_header() {
 
-    var btn = $('#btn_hamburger'),
-        menu = $('header nav .nav-list');
+    var btn    = $('#btn_hamburger'),
+        menu   = $('header nav .nav-list'),
+        header = $('header');
 
     btn.click(function (e) {
 
@@ -79,6 +80,7 @@ function init_header() {
 
         menu.toggleClass('active');
         btn.toggleClass('active');
+        header.toggleClass('active');
     });
 
     init_overlayElements();
@@ -103,12 +105,14 @@ function init_home() {
  */
 function init_overlayElements() {
 
-    var all_btnTrigger = $('[data-trigger]'),
-        overlay_wrapper = $('.overlay_elements'),
+    var all_btnTrigger   = $('[data-trigger]'),
+        overlay_elements = $('.overlay_elements'),
+        overlay_element = $('.overlay_element'),
         overlay_bg = $('.overlay_bg');
 
     overlay_bg.click(function () {
-        overlay_wrapper.toggleClass('trigger');
+        overlay_elements.removeClass('trigger');
+        overlay_element.removeClass('trigger')
     });
 
     all_btnTrigger.each(function () {
@@ -119,7 +123,7 @@ function init_overlayElements() {
 
             e.preventDefault();
 
-            overlay_wrapper.toggleClass('trigger');
+            overlay_elements.toggleClass('trigger');
             $('.' + el_toTrigger).toggleClass('trigger');
         });
     });

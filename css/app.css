@@ -383,6 +383,10 @@ h2 {
   transform: translateY(0);
   animation: none; }
 
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 92.2px; } }
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   Overlay elements
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
@@ -407,19 +411,32 @@ h2 {
         transform: translateX(0); } }
   .overlay_elements .overlay_element {
     z-index: 32;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
     max-width: 720px;
     margin: auto;
     font-size: 40px;
     font-size: 2.5rem; }
+    .overlay_elements .overlay_element.trigger {
+      opacity: 1;
+      pointer-events: auto; }
+    @media screen and (max-width: 768px) {
+      .overlay_elements .overlay_element {
+        width: 100%; } }
     .overlay_elements .overlay_element p {
       margin-top: 6.25rem; }
       @media screen and (max-width: 768px) {
         .overlay_elements .overlay_element p {
           margin-top: 40%;
-          width: 50%;
+          width: 100%;
           margin-left: auto;
           margin-right: auto;
+          padding: 0 20px;
+          box-sizing: border-box;
+          text-align: center;
           font-size: 30px;
           font-size: 1.875rem; } }
       .overlay_elements .overlay_element p:last-child {
@@ -480,7 +497,10 @@ header nav {
   @media screen and (max-width: 768px) {
     header nav {
       padding: 20px;
+      position: fixed;
+      background: white;
       width: 100%;
+      z-index: 1;
       box-sizing: border-box; } }
   header nav .logo {
     width: 240px; }
@@ -567,8 +587,8 @@ header nav {
         header nav .nav-list .wrapper .nav-el {
           padding: 30px;
           position: relative; } }
-      @media screen and (max-width: 768px) {
-        header nav .nav-list .wrapper .nav-el:after {
+      header nav .nav-list .wrapper .nav-el:after {
+        /*@media screen and (max-width: $phone) {
           content: "";
           display: block;
           background-image: url(../images/favicon.png);
@@ -579,7 +599,8 @@ header nav {
           left: 50%;
           background-size: 100%;
           height: 20px;
-          transform: translate(-50%, 50%); } }
+          transform: translate(-50%, 50%);
+        }*/ }
       @media screen and (max-width: 768px) {
         header nav .nav-list .wrapper .nav-el:last-child:after {
           display: none; } }
@@ -648,12 +669,12 @@ header nav {
     .home #slideshows_wrapper .slideshow.title {
       position: absolute;
       top: 50%;
-      transform: translateY(-50%);
-      z-index: 1; }
+      transform: translateY(-50%); }
       @media screen and (max-width: 768px) {
         .home #slideshows_wrapper .slideshow.title {
           position: relative;
-          transform: translateY(0); } }
+          transform: translateY(0);
+          z-index: -1; } }
       .home #slideshows_wrapper .slideshow.title .slides .slide .wrapper .content {
         z-index: 1;
         width: 40%; }
