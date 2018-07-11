@@ -17,7 +17,7 @@ if($lang=='fr') {
 }
 $strfilename = 'default';
 putenv("LC_ALL=$strlang");
-setlocale(LC_ALL, $strlang);
+setlocale(LC_ALL, $strlang . '.UTF-8');
 bindtextdomain($strfilename, './locale');
 textdomain($strfilename);
 
